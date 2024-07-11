@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <Navbar expand="lg"  className="mb-4 sticky-top z-1 navBar">
       <Container >
-        <Navbar.Brand href="#">Jeya chandran s</Navbar.Brand>
+        <Navbar.Brand href="/">Jeya chandran s</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto position-relative">

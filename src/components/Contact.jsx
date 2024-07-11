@@ -62,7 +62,7 @@ export default function Contact() {
                 value={formData.description} onChange={handleChange} onBlur={handleBlur} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" data-aos="fade-right" className="btn-lg mx-auto  d-block  ">
+            <Button variant="primary" type="submit" data-aos="fade-down" className="btn-lg mx-auto  d-block  ">
               Hire
             </Button>
           </Form>
@@ -71,8 +71,8 @@ export default function Contact() {
         <Col sm={12} md={6} className="mt-5 d-flex flex-column justify-content-start align-items-start">
           <h2 className='text-center mx-5 lead text-dark text-decoration-underline mb-5'
             data-aos="fade-down">Let's Connect! Reach Out Anytime</h2> 
-          <h4 data-aos="fade-left"><FaEnvelope className='text-primary' size={18} /> jeyachandranjcs@gmail.com</h4>
-          <h4 fade-left><FaPhoneAlt className='text-primary' size={18}/>+91 8524000214</h4>
+          <h5 data-aos="fade-right"><FaEnvelope className='text-primary' size={18} /> jeyachandranjcs@gmail.com</h5>
+          <h4 data-aos="fade-right"><FaPhoneAlt className='text-primary' size={18}/>+91 8524000214</h4>
           <Row>
             <Col>
               <a href="https://github.com/jeya-chandran-jcs" target="_blank" rel="noopener noreferrer" className="icon-link"

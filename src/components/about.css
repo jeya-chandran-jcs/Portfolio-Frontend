@@ -10,3 +10,9 @@
     animation: floatUpDown 3s ease-in-out infinite;
     object-fit:fill;
   } 
+
+  p {
+    text-align: left;
+  }
+ 
+  

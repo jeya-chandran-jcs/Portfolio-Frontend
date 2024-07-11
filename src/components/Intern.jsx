@@ -16,27 +16,27 @@ export default function Intern() {
           <img src="/intern.jpg" alt="Intern" className="img-fluid float-animation" data-aos="fade-right" />
         </Col>
         <Col sm={12} md={8} className="text-center lead text-lg-start">
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Developed a web application with Python backend and MySQL database management.
           </p>
           <hr/>
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Focused on frontend development using JavaScript and React.js.
           </p >
           <hr/>
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Collaborated with team members to integrate frontend and backend components seamlessly.
           </p>
           <hr/>
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Participated in team tasks for performance improvement and bug fixing.
           </p>
           <hr/>
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Acquired and applied skills in HTML, CSS, and JavaScript under the mentorship of the project manager.
           </p>
           <hr/>
-          <p data-aos="fade-left">
+          <p data-aos="fade-right">
           Technologies Used: HTML, CSS, JavaScript, React, Python, MySQL.
           </p>
 
