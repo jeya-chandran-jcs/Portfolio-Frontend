@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Spinner } from 'react-bootstrap';
 import Aos from 'aos';
 import { FaGithub, FaLinkedin, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import axios from 'axios';
 import 'aos/dist/aos.css';
 import './Contact.css';
-
 
 Aos.init();
 
@@ -15,6 +14,8 @@ export default function Contact() {
     email: '',
     description: ''
   });
+
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,25 +29,28 @@ export default function Contact() {
 
   };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
-   try{
-        const response = await axios.post("https://portfolio-backend-166h.onrender.com/contact", formData);
-        console.log(response);
-        alert("Message sent successfully");
-   }catch(error){
-        console.log(error);
-        alert("Failed to send message");
-   }
- }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // Set loading state to true
+    try {
+      const response = await axios.post("https://portfolio-backend-166h.onrender.com/contact", formData);
+      console.log(response);
+      alert("Message sent successfully");
+    } catch (error) {
+      console.log(error);
+      alert("Failed to send message");
+    } finally {
+      setLoading(false); // Set loading state to false
+    }
+  }
 
   return (
     <Container>
       <h2 className='text-center mx-5 fs-1 fw-bolder text-primary text-decoration-underline mb-5'
         data-aos="fade-up">Contact</h2>
-      <Row >
+      <Row>
         <Col sm={12} md={6} className=''>
-          <Form onSubmit={handleSubmit} className='w-75 mx-auto  '>
+          <Form onSubmit={handleSubmit} className='w-75 mx-auto'>
             <Form.Group className="my-3 shadow border-dark" controlId="formName" data-aos="fade-right">
               <Form.Control type="text" placeholder="Enter your name" name="name" 
                 value={formData.name} onChange={handleChange} onBlur={handleBlur} />
@@ -62,7 +66,7 @@ export default function Contact() {
                 value={formData.description} onChange={handleChange} onBlur={handleBlur} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" data-aos="fade-down" className="btn-lg mx-auto  d-block  ">
+            <Button variant="primary" type="submit" data-aos="fade-down" className="btn-lg mx-auto d-block">
               Hire
             </Button>
           </Form>
@@ -87,6 +91,12 @@ export default function Contact() {
         
         </Col>
       </Row>
+
+      {loading && (
+        <div className="loading-overlay d-flex justidy-content-center align-items-center">
+          <Spinner animation="border" variant="primary" />
+        </div>
+      )}
     </Container>
   );
 }
