@@ -123,7 +123,7 @@ export default function Projects() {
         data-aos="fade-down">Projects</h2>
         <Row>
             {data.map((project, index) => (
-                <Col xs={6} md={3}  key={index} className="mb-4">
+                <Col xs={12} md={3}  key={index} className="mb-4">
                     <Card className="bg-light border-dark shadow" data-aos="fade-up">
                         <Card.Img variant="top" src={project.img} alt={project.name} />
                         <hr/>
