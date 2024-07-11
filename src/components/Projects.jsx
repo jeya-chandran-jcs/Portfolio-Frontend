@@ -98,7 +98,7 @@ const data = [
         },
         {
             name: "Car Care Plus Services",
-            link: "https://car-care-plus.netlify.app/",
+            link: "https://car-care-plus-services.netlify.app/",
             img: "./images/carcare.png",
             technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"]
         },
